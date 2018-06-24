@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'calculate#index'
   get 'repiteds/destroy_all' => 'repiteds#destroy_all'
   get 'neededs/destroy_all' => 'neededs#destroy_all'
   resources :neededs
