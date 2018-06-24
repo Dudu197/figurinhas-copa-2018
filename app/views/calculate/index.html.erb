@@ -1,0 +1,37 @@
+<% if @calculate.calculated %>
+  <div class="panel panel-default">
+    <div class="panel-heading">A enviar</div>
+    <div class="panel-body">
+      <%= @calculate.to_send.join ", " %>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">A receber</h3>
+    </div>
+    <div class="panel-body">
+      <%= @calculate.to_receive.join ", " %>
+    </div>
+  </div>
+<% end %>
+
+<%= form_for(@calculate, url: 'calculate', html: { class: "form-horizontal", role: "form" }) do |f| %>
+  <div class="form-group">
+    <%= f.label :repetidas, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_area :repited_str, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :faltando, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_area :needed_str, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
