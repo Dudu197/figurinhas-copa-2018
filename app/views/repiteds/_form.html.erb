@@ -1,0 +1,22 @@
+<%= form_with(model: repited, local: true) do |form| %>
+  <% if repited.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(repited.errors.count, "error") %> prohibited this repited from being saved:</h2>
+
+      <ul>
+      <% repited.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :number %>
+    <%= form.text_area :number, id: :repited_number %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

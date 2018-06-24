@@ -1,0 +1,2 @@
+class Repited < ApplicationRecord
+end
