@@ -1,10 +1,10 @@
 <div class="page-header">
-  <%= link_to new_repited_path, class: 'btn btn-primary' do %>
+  <%= link_to new_needed_path, class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-plus"></span>
-    New Repited
+    New Neeeded
   <% end %>
-  <h1>Listing repiteds</h1>
-  
+  <h1>Listing neededs</h1>
+
   <%= link_to 'Destroy all', action: 'destroy_all' %>
 </div>
 
@@ -20,11 +20,11 @@
     </thead>
 
     <tbody>
-      <%= content_tag_for(:tr, @repiteds) do |repited| %>
-            <td><%= repited.number %></td>
-            <td><%= link_to 'Show', repited %></td>
-        <td><%= link_to 'Edit', edit_repited_path(repited) %></td>
-        <td><%= link_to 'Destroy', repited, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <%= content_tag_for(:tr, @neededs) do |needed| %>
+            <td><%= needed.number %></td>
+            <td><%= link_to 'Show', needed %></td>
+        <td><%= link_to 'Edit', edit_needed_path(needed) %></td>
+        <td><%= link_to 'Destroy', needed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tbody>
   </table>

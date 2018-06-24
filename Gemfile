@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'bootstrap-generators', '~> 3.3.4'
+gem 'record_tag_helper'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

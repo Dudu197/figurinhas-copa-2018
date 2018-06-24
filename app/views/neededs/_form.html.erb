@@ -1,11 +1,11 @@
-<%= form_for(@repited, html: { class: "form-horizontal", role: "form" }) do |f| %>
-  <% if @repited.errors.any? %>
+<%= form_for(@needed, html: { class: "form-horizontal", role: "form" }) do |f| %>
+  <% if @needed.errors.any? %>
     <div class="alert alert-danger alert-dismissable" role="alert">
       <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-      <h4><%= pluralize(@repited.errors.count, "error") %> prohibited this repited from being saved:</h4>
+      <h4><%= pluralize(@needed.errors.count, "error") %> prohibited this needed from being saved:</h4>
 
       <ul>
-      <% @repited.errors.full_messages.each do |msg| %>
+      <% @needed.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
